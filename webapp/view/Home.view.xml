@@ -1,0 +1,19 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ux402.ui5.controller.Home"
+xmlns:esc="sap.ux402.ui5.control">
+
+<Page title="{i18n>AppTitle}">
+<content>
+<VBox class="sapUiMediumMargin">
+<Button text="{i18n>HelloButtonText}" press="handleHello"></Button>
+<Input id="inpt" value="{/student/name}" description= "Hello {/student/name}" valueLiveUpdate="true" ></Input>
+<Text text="Show Me in Red" tooltip="This is tooltip" class="textRed"></Text>
+
+<esc:HoverText text="Hover Me!!" isActive="true" hoverText="Hey! You hovered me again..." hover="onHoverText"></esc:HoverText>
+
+
+</VBox>
+
+</content>
+</Page>
+
+</mvc:View>

@@ -1,4 +1,5 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ux402.ui5.controller.App">
-<Button text="{i18n>HelloButtonText}" press="handleHello"></Button>
-<Input id="inpt" value="{/student/name}" description= "Hello {/student/name}" valueLiveUpdate="true" ></Input>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ux402.ui5.controller.App" displayBlock="true">
+<Shell>
+<App id="app"></App>
+</Shell>
 </mvc:View>

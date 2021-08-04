@@ -39,6 +39,48 @@
 		  "fallbackLocale": ""
 		}
 	  }
-	}
+    },
+    "resources": {
+        "css": [
+            {
+                "uri":"style/style.css"
+            }
+            
+        ]
+    },
+    "routing": {
+        "config":{
+            "routerClass": "sap.m.routing.Router",
+            "viewType": "XML",
+            "viewPath": "sap.ux402.ui5.view",
+            "controlId": "app",
+            "controlAggregation": "pages",
+            "bypassed": {
+                "target":["NotFound"]
+            }
+        },
+        "routes":[{
+            "pattern": "",
+            "name": "Home",
+            "target": "Home"
+        }, {
+            "pattern": "ButtonNav/:greetMesg",
+            "name": "ButtonNav",
+            "target": "ButtonNav"
+        }],
+        "targets": {
+            "Home": {
+                "viewName": "Home",
+                "viewId": "Home"
+            },
+            "ButtonNav": {
+                 "viewName": "ButtonNav",
+                "viewId": "ButtonNav"
+            },
+            "NotFound": {
+                "viewName": "NotFound"
+            }
+        }
+    }
   }
 }

@@ -1,0 +1,5 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ux402.ui5.controller.Home">
+
+<MessagePage title="Not Found"></MessagePage>
+
+</mvc:View>

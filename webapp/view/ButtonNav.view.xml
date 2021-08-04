@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ux402.ui5.controller.ButtonNav">
+<Page showNavButton="true" navButtonPress="onNavBack">
+
+</Page>
+
+</mvc:View>
