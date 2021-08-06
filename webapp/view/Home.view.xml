@@ -6,9 +6,12 @@ xmlns:esc="sap.ux402.ui5.control">
 <VBox class="sapUiMediumMargin">
 <Button text="{i18n>HelloButtonText}" press="handleHello"></Button>
 <Input id="inpt" value="{/student/name}" description= "Hello {/student/name}" valueLiveUpdate="true" ></Input>
-<Text text="Show Me in Red" tooltip="This is tooltip" class="textRed"></Text>
+
+<Text id="formText" text="Show Me in Red" tooltip="This is tooltip" class="textRed" visible="{= ${/student/name} === 'Deepak'}"></Text>
 
 <esc:HoverText text="Hover Me!!" isActive="true" hoverText="Hey! You hovered me again..." hover="onHoverText"></esc:HoverText>
+
+<Button text="Show Popup" press="handleDialog" visible="{= !${device>/system/phone}}"></Button>
 
 
 </VBox>

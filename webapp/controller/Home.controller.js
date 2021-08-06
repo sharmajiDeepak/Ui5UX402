@@ -1,16 +1,16 @@
-sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast", 
-], function(Controller, MessageToast, JSONModel, ResourceModel) {
+sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast", "sap/ui/core/Fragment", "sap/ux402/ui5/model/formatter"
+], function(Controller, MessageToast, Fragment, formatter) {
     'use strict';
 
     return Controller.extend("sap.ux402.ui5.controller.Home", {
-        onInit: function() {
+        formatter: formatter,
+        onInit: function() {            
             
         },
         onBeforeRendering: function() {
          
         },
         onAfterRendering : function() {
-            
         },
        
         onExit: function () {},
@@ -28,6 +28,22 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast",
 
         onHoverText: function(oEvent) {
                 MessageToast.show(oEvent.getParameter("hoverText"));
+        },
+
+        handleDialog: function() {
+            var oView = this.getView();
+                var oDialog = new Fragment.load({
+                    id: "myFragment",
+                    name:"sap.ux402.ui5.fragments.HelloDialog",
+                    controller: this
+                }).then(function(oDialog) {
+                        oView.addDependent(oDialog);
+                        oDialog.open();
+                });
+        },
+
+        closeDialog: function (oEvent) {
+                oEvent.getSource().getParent().close();
         }
 
     });
